@@ -4,12 +4,16 @@ import gl51.data.Ip
 import gl51.service.IPService
 import gl51.service.IpConverterService
 
+import javax.inject.Inject
+
 class BinaryConverterServiceImpl implements IpConverterService {
 
-    IPService service = new IPService()
+    @Inject
+    IPService service
 
     @Override
     String getAndConvertIp() {
-        return null
+        Ip ip = service.fetchIp()
+        ///
     }
 }
